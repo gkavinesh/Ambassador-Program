@@ -1,14 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Leaderboard from './components/Leaderboard';
+import Home from './pages/Home';
 import AdminLogin from './components/AdminLogin';
+import Enter from './components/EnterDetails';
+import Login from './components/Login';
+import Register from './components/Register';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Leaderboard />} />
+        <Route path="/" element={<Home />} />
         <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/enter-details" element={<Enter />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
       </Routes>
     </Router>
   );
